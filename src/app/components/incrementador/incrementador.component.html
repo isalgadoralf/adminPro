@@ -1,0 +1,27 @@
+
+<h3>
+  {{leyenda}} -   {{progreso}}
+</h3>
+<div class="input-group">
+  <div class="input-group-append" id="button-addon4">
+    <button class="btn btn-outline-primary"
+            (click)="cambiarValor(-5)"
+            type="button">
+      <i class="mdi mdi-minus"></i>
+    </button>
+  </div>
+  <input #txtProgres type="number" class="form-control"
+         min="1"
+         max="100"
+         name = "progreso"
+         (ngModelChange)="onChange($event)"
+         [(ngModel)]="progreso">
+  <div class="input-group-append" id="button-addon5">
+    <button class="btn btn-outline-primary"
+            (click)="cambiarValor(5)"
+            type="button">
+      <i class="mdi mdi-plus"></i>
+
+    </button>
+  </div>
+</div>
